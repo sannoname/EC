@@ -1,110 +1,69 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EC 網站</title>
+    <title>EC サイト</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="page-container">
         
         <header class="site-header">
-            <div class="logo" id="nav-logo">EC 網站</div>
+            <div class="logo" id="nav-logo">EC サイト</div>
             <nav class="main-nav">
-                <a id="nav-home">首頁</a>
-                <a id="nav-products">商品列表</a>
-                <a id="nav-local">地方特產</a>
-                <a id="nav-vendor">合作廠商介紹</a>
-                <a id="nav-detail">產品詳情</a>
-                <a id="nav-cart">購物車</a>
+                <a id="nav-home">ホーム</a>
+                <a id="nav-products">商品一覧</a>
+                <a id="nav-local">地域特産</a>
+                <a id="nav-vendor">取引先紹介</a>
+                <a id="nav-cart">カート</a>
+                <a id="nav-login" href="login.html">ログイン/登録</a>
             </nav>
         </header>
 
         <div id="home-page" class="page-content">
-            <section class="hero-carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-slide active">
-                        <h2>🎉 聖誕限時特惠，全館 8 折起！</h2>
-                        <p>點擊「商品列表」查看更多獨家禮品</p>
-                        <button class="btn-shop-now" onclick="showPage('product-list-page')">立即選購</button>
-                    </div>
-                    <div class="carousel-slide">
-                        <h2>✨ 2025 春季新品上市！</h2>
-                        <p>優雅設計，限量供應中</p>
-                        <button class="btn-shop-now" onclick="showPage('product-list-page')">探索新品</button>
-                    </div>
-                    <div class="carousel-slide">
-                        <h2>🎁 在地好物，地方特產專區</h2>
-                        <p>嚐嚐來自台灣各地的精選美味</p>
-                        <button class="btn-shop-now" onclick="showPage('local-page')">查看特產</button>
-                    </div>
-                </div>
-                <div class="carousel-indicators">
-                    <span class="dot active" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
-            </section>
-
-            <section class="category-quick-links">
-                <div class="category-item">
-                    <span class="category-item-icon"></span>
-                    <p>📘 文具用品</p>
-                </div>
-                <div class="category-item">
-                    <span class="category-item-icon"></span>
-                    <p>🎁 節日禮品</p>
-                </div>
-                <div class="category-item">
-                    <span class="category-item-icon"></span>
-                    <p>🛋️ 家居飾品</p>
-                </div>
-                <div class="category-item">
-                    <span class="category-item-icon"></span>
-                    <p>🌱 植物盆栽</p>
-                </div>
-            </section>
+            <h1 class="page-title" style="color: var(--text-light);">🇯🇵 大分特選 EC サイトへようこそ</h1>
+            <p style="text-align: center; color: var(--text-light);">九州・豊後（ぶんご）の温泉とグルメを探索。</p>
             
             <section class="hot-products-section">
-                <h2 class="section-title">🔥 熱銷排行榜</h2>
+                <h2 class="section-title">✨ ピックアップ商品</h2>
                 <div class="product-grid">
-                    <article class="product-card">
-                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=商品+A" alt="商品 A"></div>
-                        <div class="product-info-wrapper">
-                            <h2 class="product-title">簡約陶瓷馬克杯</h2>
-                            <p class="product-price">NT$ 500</p>
-                            <p class="stock-display">📦 庫存充足</p>
-                            <button class="btn-add-to-cart">加入購物車</button>
-                        </div>
-                    </article>
                      <article class="product-card">
-                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=商品+B" alt="商品 B"></div>
+                        <div class="product-image-container"><img src="A2.png" alt="竹乃宴 箱入"></div>
                         <div class="product-info-wrapper">
-                            <h2 class="product-title">現代抽象掛畫</h2>
-                            <p class="product-price">NT$ 880</p>
-                            <p class="stock-display">📦 庫存充足</p>
-                            <button class="btn-add-to-cart">加入購物車</button>
+                            <h2 class="product-title">🍶 竹乃宴 - 竹炭ろ過焼酎 (限定)</h2>
+                            <p class="product-price">¥ 8,800</p>
+                            <p class="stock-display">📦 在庫: 12 個</p>
+                            <button class="btn-add-to-cart">カートに追加</button>
                         </div>
                     </article>
                     <article class="product-card">
-                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=商品+C" alt="商品 C"></div>
+                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=豊後牛" alt="豊後和牛"></div>
                         <div class="product-info-wrapper">
-                            <h2 class="product-title">療癒多肉盆栽</h2>
-                            <p class="product-price">NT$ 320</p>
-                            <p class="stock-display">📦 庫存充足</p>
-                            <button class="btn-add-to-cart">加入購物車</button>
+                            <h2 class="product-title">🥩 豊後和牛 霜降り肉</h2>
+                            <p class="product-price">¥ 12,000</p>
+                            <p class="stock-display">📦 在庫: 8 個</p>
+                            <button class="btn-add-to-cart">カートに追加</button>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=別府温泉泥パック" alt="別府温泉泥パック"></div>
+                        <div class="product-info-wrapper">
+                            <h2 class="product-title">♨️ 別府温泉 泥パック</h2>
+                            <p class="product-price">¥ 3,500</p>
+                            <p class="stock-display">📦 在庫: 5 個</p>
+                            <button class="btn-add-to-cart">カートに追加</button>
                         </div>
                     </article>
                      <article class="product-card">
-                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=商品+D" alt="商品 D"></div>
+                        <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=大分かぼす" alt="大分かぼす"></div>
                         <div class="product-info-wrapper">
-                            <h2 class="product-title">香氛蠟燭禮盒</h2>
-                            <p class="product-price">NT$ 650</p>
-                            <p class="stock-display">📦 庫存充足</p>
-                            <button class="btn-add-to-cart">加入購物車</button>
+                            <h2 class="product-title">🍋 大分産かぼす (新鮮)</h2>
+                            <p class="product-price">¥ 1,500</p>
+                            <p class="stock-display">📦 在庫: 10 個</p>
+                            <button class="btn-add-to-cart">カートに追加</button>
                         </div>
                     </article>
                 </div>
@@ -116,23 +75,23 @@
              <div class="list-wrapper">
                 <aside class="sidebar">
                     <div class="filter-section">
-                        <h3>🛍️ 商品分類</h3>
+                        <h3>🛍️ 大分商品カテゴリ</h3>
                         <ul>
-                            <li>文具用品</li>
-                            <li>節日禮品</li>
-                            <li>家居飾品</li>
-                            <li>植物盆栽</li>
+                            <li>🍶 地酒と焼酎 (Jizake)</li>
+                            <li>🍜 豊後和牛と海産 (Bungo Beef)</li>
+                            <li>♨️ 温泉コスメと工芸 (Onsen)</li>
+                            <li>🍋 かぼすと地元農産 (Kabosu)</li>
                         </ul>
                     </div>
                 </aside>
                 
                 <main class="list-main-content">
-                    <h1 class="list-title">所有商品</h1>
+                    <h1 class="list-title">大分特選商品</h1>
                     
                     <div class="controls-bar">
-                        <p>總共 <span id="total-items">48</span> 個商品</p>
+                        <p>合計 <span id="total-items">48</span> アイテム</p>
                         <div class="pagination-controls">
-                            <label for="items-per-page">每頁顯示數量：</label>
+                            <label for="items-per-page">表示件数：</label>
                             <select id="items-per-page">
                                 <option value="20" selected>20 (4x5)</option>
                                 <option value="50">50</option>
@@ -143,39 +102,57 @@
 
                     <div class="product-grid">
                         <article class="product-card">
-                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=產品+1" alt="商品 1"></div>
+                            <div class="product-image-container"><img src="A2.png" alt="竹乃宴 箱入"></div>
                             <div class="product-info-wrapper">
-                                <h2 class="product-title">產品名稱 1：經典單品</h2>
-                                <p class="product-price">NT$ 1,200</p>
-                                <p class="stock-display">📦 庫存: 8 件</p>
-                                <button class="btn-add-to-cart">加入購物車</button>
+                                <h2 class="product-title">🍶 竹乃宴 - 竹炭ろ過焼酎 (限定)</h2>
+                                <p class="product-price">¥ 8,800</p>
+                                <p class="stock-display">📦 在庫: 12 個</p>
+                                <button class="btn-add-to-cart">カートに追加</button>
                             </div>
                         </article>
                         <article class="product-card">
-                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=產品+2" alt="商品 2"></div>
+                            <div class="product-image-container"><img src="A1.png" alt="大分むぎ焼酎 心月院"></div>
                             <div class="product-info-wrapper">
-                                <h2 class="product-title">產品名稱 2：設計師款</h2>
-                                <p class="product-price">NT$ 499</p>
-                                <p class="stock-display">📦 庫存: 25 件</p>
-                                <button class="btn-add-to-cart">加入購物車</button>
+                                <h2 class="product-title">🍶 心月院 - 大麦焼酎 (特選)</h2>
+                                <p class="product-price">¥ 7,500</p>
+                                <p class="stock-display">📦 在庫: 30 個</p>
+                                <button class="btn-add-to-cart">カートに追加</button>
                             </div>
                         </article>
                         <article class="product-card">
-                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=產品+3" alt="商品 3"></div>
+                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=豊後牛" alt="豊後和牛"></div>
                             <div class="product-info-wrapper">
-                                <h2 class="product-title">產品名稱 3：限量發售</h2>
-                                <p class="product-price">NT$ 1,990</p>
-                                <p class="stock-display">📦 庫存: 5 件</p>
-                                <button class="btn-add-to-cart">加入購物車</button>
+                                <h2 class="product-title">🥩 豊後和牛 霜降り肉</h2>
+                                <p class="product-price">¥ 12,000</p>
+                                <p class="stock-display">📦 在庫: 8 個</p>
+                                <button class="btn-add-to-cart">カートに追加</button>
                             </div>
                         </article>
                         <article class="product-card">
-                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=產品+4" alt="商品 4"></div>
+                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=日田酒" alt="日田酒"></div>
                             <div class="product-info-wrapper">
-                                <h2 class="product-title">產品名稱 4：暢銷組合</h2>
-                                <p class="product-price">NT$ 2,500</p>
-                                <p class="stock-display">📦 庫存: 10 件</p>
-                                <button class="btn-add-to-cart">加入購物車</button>
+                                <h2 class="product-title">🍶 日田天領水焼酎</h2>
+                                <p class="product-price">¥ 980</p>
+                                <p class="stock-display">📦 在庫: 25 個</p>
+                                <button class="btn-add-to-cart">カートに追加</button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=別府温泉泥パック" alt="別府温泉泥パック"></div>
+                            <div class="product-info-wrapper">
+                                <h2 class="product-title">♨️ 別府温泉 泥パック</h2>
+                                <p class="product-price">¥ 3,500</p>
+                                <p class="stock-display">📦 在庫: 5 個</p>
+                                <button class="btn-add-to-cart">カートに追加</button>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-image-container"><img src="https://via.placeholder.com/400x300?text=大分かぼす" alt="大分かぼす"></div>
+                            <div class="product-info-wrapper">
+                                <h2 class="product-title">🍋 大分産かぼす (新鮮)</h2>
+                                <p class="product-price">¥ 1,500</p>
+                                <p class="stock-display">📦 在庫: 10 個</p>
+                                <button class="btn-add-to-cart">カートに追加</button>
                             </div>
                         </article>
                     </div>
@@ -188,59 +165,59 @@
                 
                 <section class="image-gallery">
                     <div class="main-image">
-                        <img src="https://via.placeholder.com/600x600?text=主要產品圖" alt="產品主圖">
+                        <img src="A2.png" alt="メイン製品画像">
                     </div>
                     <div class="thumbnail-list">
-                        <img src="https://via.placeholder.com/100x100?text=縮圖1" alt="縮圖1" class="active">
-                        <img src="https://via.placeholder.com/100x100?text=縮圖2" alt="縮圖2">
-                        <img src="https://via.placeholder.com/100x100?text=縮圖3" alt="縮圖3">
+                        <img src="A1.png" alt="サムネイル1" class="active">
+                        <img src="https://via.placeholder.com/100x100?text=サムネイル2" alt="サムネイル2">
+                        <img src="https://via.placeholder.com/100x100?text=サムネイル3" alt="サムネイル3">
                     </div>
                 </section>
 
                 <section class="product-info-panel">
-                    <h1 class="product-title">精緻手作皮革背包</h1>
-                    <p class="product-sku">商品編號：P-123456</p>
+                    <h1 class="product-title">🍶 竹乃宴 - 竹炭ろ過焼酎 (限定)</h1>
+                    <p class="product-sku">商品コード：OITA-007</p>
                     
                     <div class="product-short-intro">
-                        <h3>產品簡介</h3>
-                        <p>這款背包是我們工匠系列的年度暢銷款，以其耐用性與經典設計著稱。適合日常通勤與輕旅行。</p>
+                        <h3>製品概要</h3>
+                        <p>この焼酎は竹炭で濾過されており、口当たりが非常にまろやかで、竹のほのかな香りが特徴です。大分県日田地方の限定品です。</p>
                     </div>
 
                     <div class="price-section">
-                        <span class="sale-price">NT$ 2,980</span>
-                        <span class="original-price">原價 NT$ 3,980</span>
+                        <span class="sale-price">¥ 8,800</span>
+                        <span class="original-price">定価 ¥ 9,500</span>
                     </div>
                     
                     <div class="options-container">
                         <div class="option-group">
-                            <label>顏色：</label>
+                            <label>容量：</label>
                             <select>
-                                <option>經典黑</option>
-                                <option>焦糖棕</option>
+                                <option>720ml</option>
+                                <option>1800ml</option>
                             </select>
                         </div>
                         
                         <div class="option-group">
-                            <label>數量：</label>
+                            <label>数量：</label>
                             <input type="number" value="1" min="1" max="10">
                         </div>
                         
                         <div class="stock-status">
-                            ✅ **目前庫存：尚有 12 件**
+                            ✅ **現在の在庫：12 個**
                         </div>
                     </div>
                     
                     <div class="action-buttons">
-                        <button class="btn-add-to-cart-detail" id="btn-add-to-cart-detail">🛒 加入購物車</button>
-                        <button class="btn-buy-now-detail" id="btn-buy-now-detail">立即購買</button>
+                        <button class="btn-add-to-cart-detail" id="btn-add-to-cart-detail">🛒 カートに追加</button>
+                        <button class="btn-buy-now-detail" id="btn-buy-now-detail">今すぐ購入</button>
                     </div>
                     
                     <div class="delivery-info">
-                        🚚 **預計出貨日：** 3-5 個工作天內
+                        🚚 **出荷予定日：** 3〜5 営業日以内
                     </div>
                     
                     <div class="official-links">
-                        🔗 **<a href="https://www.ac-ec-website.com" target="_blank">造訪商品官方網站</a>**
+                        🔗 **<a href="https://www.oitasake.com" target="_blank">蔵元公式サイトへ</a>**
                     </div>
                 </section>
                 
@@ -248,88 +225,88 @@
             
             <section class="product-tabs-section">
                 <nav class="tabs-nav">
-                    <button class="tab-btn active" onclick="switchTab(event, 'description')">產品描述</button>
-                    <button class="tab-btn" onclick="switchTab(event, 'specifications')">詳細規格</button>
-                    <button class="tab-btn" onclick="switchTab(event, 'reviews')">客戶評價 (4.5/5)</button>
+                    <button class="tab-btn active" onclick="switchTab(event, 'description')">製品詳細</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'specifications')">詳細仕様</button>
+                    <button class="tab-btn" onclick="switchTab(event, 'reviews')">レビュー (4.5/5)</button>
                 </nav>
                 
                 <div id="description" class="tab-content active">
-                    <p>這款背包採用義大利進口牛皮，經由資深工匠手工縫製，設計簡約大方，適合任何場合。</p>
+                    <p>この麦焼酎は、大分特有の竹炭を用いて丁寧に濾過されており、まろやかな口当たりと爽やかな風味が特徴です。贈答品としても最適です。</p>
                 </div>
                 
                 <div id="specifications" class="tab-content">
-                    <p>材質：100% 義大利頭層牛皮</p>
-                    <p>尺寸：高 40cm x 寬 30cm x 厚 15cm</p>
-                    <p>重量：約 1.2 kg</p>
-                    <p>保固：1 年非人為損壞保固</p>
+                    <p>アルコール度数：25%</p>
+                    <p>原材料：大麦、大麦麹、竹炭</p>
+                    <p>産地：日本 大分県 日田市</p>
+                    <p>保証：なし</p>
                 </div>
                 
                 <div id="reviews" class="tab-content">
-                    <p>⭐⭐⭐⭐⭐ (王小姐): 包包質感非常好，出貨速度快，非常滿意！</p>
-                    <p>⭐⭐⭐⭐ (陳先生): 容量足夠，但希望有更多顏色選擇。</p>
+                    <p>⭐⭐⭐⭐⭐ (佐藤様): パッケージが美しく、味もとてもまろやかで美味しいです！</p>
+                    <p>⭐⭐⭐⭐ (田中様): 値段は少し高めですが、贈り物には最適です。</p>
                 </div>
             </section>
         </div>
         
         <div id="checkout-page" class="page-content">
             <nav class="checkout-steps">
-                <span class="step active">1. 訂單確認</span>
+                <span class="step active">1. 注文確認</span>
                 <span class="step active">→</span>
-                <span class="step">2. 填寫資料</span>
+                <span class="step">2. 情報入力</span>
                 <span class="step">→</span>
-                <span class="step">3. 完成付款</span>
+                <span class="step">3. 支払い完了</span>
             </nav>
 
             <div class="checkout-main-grid">
                 
                 <main class="checkout-form">
-                    <h2 class="form-title">收件人資訊</h2>
-                    <form onsubmit="alert('模擬訂單送出中...'); return false;">
+                    <h2 class="form-title">お届け先情報</h2>
+                    <form onsubmit="alert('注文を送信しています...'); return false;">
                         
                         <div class="form-group">
-                            <label for="name">姓名</label>
-                            <input type="text" id="name" placeholder="請輸入真實姓名" required>
+                            <label for="name">氏名</label>
+                            <input type="text" id="name" placeholder="氏名を入力してください" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="address">地址</label>
-                            <input type="text" id="address" placeholder="請輸入詳細地址" required>
+                            <label for="address">住所</label>
+                            <input type="text" id="address" placeholder="詳細な住所を入力してください" required>
                         </div>
 
-                        <h2 class="form-title payment-section">付款方式</h2>
+                        <h2 class="form-title payment-section">お支払い方法</h2>
                         <div class="payment-options">
                             <label class="radio-option">
-                                <input type="radio" name="payment" value="credit_card" checked> 信用卡 / Visa / Master
+                                <input type="radio" name="payment" value="credit_card" checked> クレジットカード (Visa / Master)
                             </label>
                             <label class="radio-option">
-                                <input type="radio" name="payment" value="transfer"> 銀行轉帳
+                                <input type="radio" name="payment" value="transfer"> 銀行振込
                             </label>
                             <label class="radio-option">
-                                <input type="radio" name="payment" value="cod"> 貨到付款
+                                <input type="radio" name="payment" value="cod"> 代金引換
                             </label>
                         </div>
 
-                        <button type="submit" class="btn-submit-order">確認並送出訂單</button>
+                        <button type="submit" class="btn-submit-order">確認して注文を送信</button>
                     </form>
                 </main>
 
                 <aside class="order-summary">
-                    <h3>📦 訂單摘要</h3>
+                    <h3>📦 注文概要</h3>
                     <div class="items-list">
                         <div class="item-row">
-                            <span>皮革背包 x 1</span>
-                            <span>NT$ 2,980</span>
+                            <span>竹乃宴焼酎 x 1</span>
+                            <span>¥ 8,800</span>
                         </div>
                         <div class="item-row">
-                            <span>香氛蠟燭禮盒 x 1</span>
-                            <span>NT$ 650</span>
+                            <span>豊後和牛 x 1</span>
+                            <span>¥ 12,000</span>
                         </div>
                     </div>
                     
                     <div class="summary-total">
-                        <p>商品總額：<span>NT$ 3,630</span></p>
-                        <p>運費：<span>NT$ 60</span></p>
-                        <p class="final-total">總計：<span>NT$ 3,690</span></p>
+                        <p>商品合計：<span>¥ 20,800</span></p>
+                        <p>送料：<span>¥ 600</span></p>
+                        <p class="final-total">合計：<span>¥ 21,400</span></p>
                     </div>
                 </aside>
 
@@ -337,44 +314,44 @@
         </div>
         
         <div id="local-page" class="page-content">
-            <h1 class="page-title">🌍 地方特產推薦</h1>
-            <p class="page-subtitle">探索來自台灣各地的精選在地好物與工藝品。</p>
+            <h1 class="page-title">🌍 地域特産のおすすめ</h1>
+            <p class="page-subtitle">九州各地から厳選された地元の美味しいものや工芸品をご紹介します。</p>
             
             <div class="local-product-grid">
                 <div class="local-card">
-                    <img src="https://via.placeholder.com/300x200?text=台南醬油" alt="台南醬油">
-                    <h3>台南古法醬油</h3>
-                    <p>來自百年老店的純釀造，風味濃郁。</p>
-                    <span class="location-tag">台南</span>
+                    <img src="https://via.placeholder.com/300x200?text=熊本馬刺し" alt="熊本馬刺し">
+                    <h3>熊本 馬刺しセット</h3>
+                    <p>本場熊本の新鮮な馬刺し。特別な日のおつまみに。</p>
+                    <span class="location-tag">熊本</span>
                 </div>
                 <div class="local-card">
-                    <img src="https://via.placeholder.com/300x200?text=花蓮玉石皂" alt="花蓮玉石皂">
-                    <h3>花蓮玉石手工皂</h3>
-                    <p>天然礦物磨製，洗後滋潤不乾澀。</p>
-                    <span class="location-tag">花蓮</span>
+                    <img src="https://via.placeholder.com/300x200?text=福岡とんこつラーメン" alt="福岡とんこつラーメン">
+                    <h3>福岡 博多とんこつラーメン</h3>
+                    <p>濃厚な豚骨スープと細麺が絡む、王道の味。</p>
+                    <span class="location-tag">福岡</span>
                 </div>
             </div>
         </div>
 
         <div id="vendor-page" class="page-content">
-            <h1 class="page-title">🤝 合作廠商介紹</h1>
-            <p class="page-subtitle">我們引以為傲的合作夥伴，共同為您提供高品質的產品。</p>
+            <h1 class="page-title">🤝 取引先のご紹介</h1>
+            <p class="page-subtitle">私たちは信頼できるパートナーと共に、高品質な製品をお届けしています。</p>
             
             <div class="vendor-list">
                 <div class="vendor-item">
-                    <img src="https://via.placeholder.com/100x100?text=皮革工坊" alt="廠商A Logo">
+                    <img src="https://via.placeholder.com/100x100?text=肉の達人" alt="A社ロゴ">
                     <div>
-                        <h3>匠心皮革工坊</h3>
-                        <p>專注於手工皮革製品，傳承歐洲百年工藝，是我們背包系列的主要供應商。</p>
-                        <p class="vendor-link">官網：<a href="#" target="_blank">www.artisanleather.com</a></p>
+                        <h3>豊後牛牧場直送</h3>
+                        <p>大分県内の牧場と直接契約し、新鮮で高品質な豊後和牛のみを供給しています。</p>
+                        <p class="vendor-link">公式サイト：<a href="#" target="_blank">www.bungo-farm.com</a></p>
                     </div>
                 </div>
                 <div class="vendor-item">
-                    <img src="https://via.placeholder.300x200?text=花草茶莊" alt="廠商B Logo">
+                    <img src="https://via.placeholder.300x200?text=蔵元ロゴ" alt="B社ロゴ">
                     <div>
-                        <h3>山林花草茶莊</h3>
-                        <p>嚴選高山有機茶葉和天然花草，堅持無添加，提供最純淨的茶品。</p>
-                        <p class="vendor-link">聯繫：support@mountaintea.com</p>
+                        <h3>日田川焼酎蔵</h3>
+                        <p>創業100年。日田天領水を使用した伝統的な焼酎造りにこだわっています。</p>
+                        <p class="vendor-link">連絡先：info@hitasake.co.jp</p>
                     </div>
                 </div>
             </div>
@@ -383,7 +360,7 @@
     </div>
     
     <footer style="text-align: center; padding: 20px; margin-top: 50px; background-color: #f0f0f0; color: #6b7280;">
-        <p>&copy; 2025 EC 網站</p>
+        <p>&copy; 2025 Bungo Oita EC サイト</p>
     </footer>
 
     <script src="script.js"></script>

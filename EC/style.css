@@ -1,13 +1,13 @@
-/* --- 顏色變數與基礎設定 --- */
+/* --- カラー変数と基本設定 (大分テーマ) --- */
 :root {
-    --primary-color: #3b82f6; /* 藍色品牌色 */
-    --accent-color: #ef4444;  /* 紅色特價或警示色 */
-    --success-color: #10b981; /* 綠色成功色 */
-    --background-color: #f9fafb;
+    --primary-color: #556b2f; /* オリーブグリーン/フォレストグリーン */
+    --accent-color: #d2691e;  /* チョコレート色/温かいブラウン */
+    --success-color: #10b981; 
+    --background-color: #fcfcf4; /* クリームイエロー (和風の柔らかな基調) */
     --card-background: #ffffff;
-    --text-color: #1f2937;
+    --text-color: #36454f; /* ダークグレーのテキスト */
     --text-light: #6b7280;
-    --border-color: #e5e7eb;
+    --border-color: #e0e0d8;
 }
 
 * {
@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントに設定 */
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -30,7 +30,7 @@ body {
     padding-top: 25px; 
 }
 
-/* --- 頂部導航列 (置頂滑動) --- */
+/* --- トップナビゲーションバー (スティッキーヘッダー) --- */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -57,12 +57,13 @@ body {
     color: var(--text-color);
     cursor: pointer;
     transition: color 0.2s;
+    font-weight: 500; /* より落ち着いたフォントウェイト */
 }
 .main-nav a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color); /* ホバーでアクセントカラー */
 }
 
-/* --- 頁面切換控制 (JS 實現) --- */
+/* --- ページ切り替え制御 (JS 実装) --- */
 #product-list-page, #product-detail-page, #checkout-page, #local-page, #vendor-page {
     display: none;
 }
@@ -73,7 +74,7 @@ body {
      padding-top: 20px; 
 }
 
-/* --- 頁面通用標題樣式 --- */
+/* --- ページ共通タイトルスタイル --- */
 .page-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -88,7 +89,7 @@ body {
     text-align: center;
 }
 
-/* --- 1. 首頁樣式 - 輪播 --- */
+/* --- 1. ホームページ (空の輪播エリアのスタイルを維持) --- */
 .hero-carousel {
     background-color: #e0f7fa; 
     height: 350px;
@@ -96,61 +97,19 @@ body {
     border-radius: 12px;
     overflow: hidden; 
     position: relative; 
-}
-.carousel-inner {
     display: flex;
-    transition: transform 0.8s ease-in-out;
-    height: 100%;
-}
-.carousel-slide {
-    flex: 0 0 100%; 
-    width: 100%; 
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
 }
-.carousel-slide h2 {
-    font-size: 2.2rem;
-    color: #007bff;
-    margin-bottom: 15px;
+.carousel-slide {
+    display: none;
 }
-.btn-shop-now {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 12px 30px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-.carousel-indicators {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-.dot {
-    height: 12px;
-    width: 12px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    cursor: pointer;
-}
-.dot.active {
-    background-color: var(--primary-color);
+.carousel-inner, .carousel-indicators {
+    display: none;
 }
 
-
-/* 快速分類導航 */
+/* クイックカテゴリアイテム（ホーム/リスト共通） */
 .category-quick-links {
     display: flex;
     justify-content: space-around;
@@ -178,7 +137,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* --- 2. 商品列表 & 產品卡片樣式 --- */
+/* --- 2. 商品リスト & 製品カードスタイル --- */
 .section-title {
     font-size: 2rem;
     text-align: center;
@@ -207,16 +166,36 @@ body {
     transition: transform 0.3s, box-shadow 0.3s; 
     cursor: pointer;
 }
-.product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);}
-.product-image-container { height: 200px; overflow: hidden;}
-.product-card img { width: 100%; height: 100%; object-fit: cover;}
-.product-price { color: var(--accent-color); font-size: 1.5rem; font-weight: 700; margin: 10px 0;}
-.stock-display { font-size: 0.9em; font-weight: 500; margin: 5px 0 15px; color: var(--success-color); }
+.product-card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.product-image-container { 
+    height: 200px; 
+    overflow: hidden;
+}
+.product-card img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+.product-price { 
+    color: var(--accent-color); 
+    font-size: 1.6rem; 
+    font-weight: 700; 
+    margin: 10px 0;
+}
+.stock-display { 
+    font-size: 0.9em; 
+    font-weight: 500; 
+    margin: 5px 0 15px; 
+    color: var(--success-color); 
+}
 .product-card .btn-add-to-cart { 
     width: 90%; 
     background-color: var(--primary-color); 
+    border: 2px solid var(--primary-color);
     color: white; 
-    border: none; 
     margin-top: 10px; 
     margin-bottom: 10px; 
     padding: 10px 20px; 
@@ -224,7 +203,7 @@ body {
     cursor: pointer;
 }
 
-/* --- 2. 商品列表頁樣式 --- */
+/* --- 2. 商品リストページスタイル --- */
 .list-wrapper { display: flex; gap: 30px;}
 .sidebar {
     width: 250px; padding: 20px; background-color: var(--card-background);
@@ -237,7 +216,7 @@ body {
 .controls-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; margin-bottom: 20px; border-bottom: 1px solid var(--border-color);}
 .pagination-controls select { padding: 5px 8px; border: 1px solid var(--border-color); border-radius: 4px;}
 
-/* --- 3. 產品詳情頁樣式 --- */
+/* --- 3. 製品詳細ページスタイル --- */
 .product-detail-wrapper {
     display: grid; grid-template-columns: 6fr 4fr; gap: 40px; background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -254,7 +233,7 @@ body {
 .official-links { margin-top: 20px; padding: 10px; border: 1px solid #cceeff; border-radius: 6px;}
 .official-links a { color: var(--primary-color); text-decoration: none;}
 
-/* 產品詳情頁籤樣式 (JS 互動) */
+/* 製品詳細ページのタブスタイル (JS 連携) */
 .product-tabs-section { margin-top: 40px;}
 .tabs-nav { display: flex; border-bottom: 2px solid var(--border-color);}
 .tab-btn {
@@ -263,14 +242,56 @@ body {
 }
 .tab-btn.active { color: var(--primary-color); border-bottom-color: var(--primary-color);}
 
-/* 頁籤內容控制 */
+/* タブコンテンツ制御 */
 .tab-content { display: none; padding: 10px 0;}
 .tab-content.active { display: block; padding: 20px 0; border-top: 1px solid var(--border-color);}
 
 
-/* --- 4. 結帳頁面樣式 --- */
+/* --- 4. 決済ページスタイル --- */
 .checkout-main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px;}
 .checkout-form { background-color: white; padding: 30px; border-radius: 12px;}
 .form-title { font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;}
 .form-group label { display: block; margin-bottom: 8px; font-weight: 500;}
 .checkout-form input[type="text"] { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px;}
+.btn-submit-order { width: 100%; padding: 15px; background-color: var(--success-color); color: white; border: none; font-size: 1.2rem; margin-top: 30px; cursor: pointer;}
+.order-summary { background-color: #f3f4f6; padding: 20px; border-radius: 12px; height: fit-content;}
+.item-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.95rem;}
+.final-total { font-size: 1.5rem; font-weight: 700; color: var(--accent-color);}
+
+/* --- 6. 地域特産ページスタイル --- */
+.local-product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
+.local-card { background-color: var(--card-background); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transition: transform 0.3s; position: relative;}
+.local-card img { width: 100%; height: 200px; object-fit: cover;}
+.local-card h3 { font-size: 1.4rem; margin: 15px 15px 5px; color: var(--text-color);}
+.local-card p { padding: 0 15px 15px; color: var(--text-light);}
+.location-tag { position: absolute; top: 10px; right: 10px; background-color: var(--accent-color); color: white; padding: 5px 10px; border-radius: 5px; font-weight: 700; font-size: 0.9rem;}
+
+/* --- 7. 取引先紹介ページスタイル --- */
+.vendor-list { display: flex; flex-direction: column; gap: 30px;}
+.vendor-item { display: flex; align-items: flex-start; gap: 20px; padding: 25px; background-color: var(--card-background); border-radius: 12px; border: 1px solid var(--border-color);}
+.vendor-item img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; flex-shrink: 0;}
+.vendor-item h3 { margin-top: 0; color: var(--primary-color);}
+.vendor-link a { color: var(--accent-color); text-decoration: none;}
+        
+/* --- RWD レスポンシブデザイン調整 --- */
+@media (max-width: 992px) {
+    .main-nav a { margin-left: 10px; }
+    .list-wrapper, .product-detail-wrapper, .checkout-main-grid {
+        grid-template-columns: 1fr; 
+    }
+    .sidebar { width: 100%; margin-bottom: 20px;}
+    .product-detail-wrapper, .checkout-form { padding: 20px; }
+}
+@media (max-width: 768px) {
+    .product-grid, .local-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .site-header { flex-direction: column; align-items: flex-start; padding: 15px 10px;}
+    .main-nav { margin-top: 10px; flex-wrap: wrap;}
+    .main-nav a { margin-left: 0; margin-right: 15px; margin-bottom: 5px;}
+}
+@media (max-width: 480px) {
+     .product-grid, .local-product-grid {
+        grid-template-columns: 1fr;
+    }
+}
