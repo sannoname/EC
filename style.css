@@ -17,7 +17,7 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントに設定 */
+    font-family: 'Noto Sans JP', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -57,10 +57,10 @@ body {
     color: var(--text-color);
     cursor: pointer;
     transition: color 0.2s;
-    font-weight: 500; /* より落ち着いたフォントウェイト */
+    font-weight: 500;
 }
 .main-nav a:hover {
-    color: var(--accent-color); /* ホバーでアクセントカラー */
+    color: var(--accent-color);
 }
 
 /* --- ページ切り替え制御 (JS 実装) --- */

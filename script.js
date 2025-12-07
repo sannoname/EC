@@ -45,18 +45,21 @@ function switchTab(event, contentId) {
 
 // 初期化処理
 document.addEventListener('DOMContentLoaded', () => {
-    // 初期表示はホーム
-    showPage('home-page');
+    // 【調整点】初期表示を商品一覧ページに設定
+    showPage('product-list-page'); 
     
     // ナビゲーションイベントのバインド
-    document.getElementById('nav-home').onclick = () => showPage('home-page');
+    // ホームリンクは削除済みだが、ロゴクリック時は商品一覧へ
+    document.getElementById('nav-logo').onclick = () => showPage('product-list-page'); 
+
+    // 他のナビゲーションリンクのバインド
     document.getElementById('nav-products').onclick = () => showPage('product-list-page');
     document.getElementById('nav-local').onclick = () => showPage('local-page');
     document.getElementById('nav-vendor').onclick = () => showPage('vendor-page');
     document.getElementById('nav-cart').onclick = () => showPage('checkout-page');
-    document.getElementById('nav-logo').onclick = () => showPage('home-page');
+    // nav-login は外部ファイルへの直接リンクのため、JS バインドは不要
     
-    // 商品カードクリックで製品詳細ページへ遷移
+    // 商品カードクリックで製品詳細ページへ遷移 (商品一覧/ホーム共通)
     document.querySelectorAll('.product-card').forEach(card => {
         card.onclick = () => showPage('product-detail-page');
     });
